@@ -1,0 +1,228 @@
+/* Reset box sizing and font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Make sure body takes the full height of the viewport */
+body {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    background-color: #131313; /* Background color */
+    overflow: hidden;
+}
+
+/* Center the entire section */
+section {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Center content inside the 'background' */
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Style the h2 and ensure it’s centered */
+ h2 {
+    text-align: center;
+    font-size: 2rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #7708ff 0%, #72d1f4 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-top: 20px; /* Optional, adjust if needed */
+}
+
+/* Use grid for form-value and center it */
+.form-value {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout */
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    background-color: #141414;
+}
+
+.inputbox {
+    position: relative;
+    margin: 15px 0;
+    width: 100%;
+    border-bottom: 2px solid #fff;
+
+}
+
+input [type="text"]{
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: lem;
+    
+}
+
+input[type="text"]:focus + label,
+input[type="text"]:valid + label {
+    top: -20px;
+    font-size: 0.85em;
+    color: #f0f0f0;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: lem;
+    pointer-events: none;
+    transition: 0.45s;
+
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #fff;
+    
+
+
+
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+
+}
+.forget {
+    margin: 15px 0; /* Adjusted margin for better spacing */
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Full width of the form box */
+}
+
+.forget label input {
+    margin-right: 3px;
+}
+
+.forget label a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget label a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: #7708ff;
+    
+}
+
+.register {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: left;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background: #222;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    position: relative;
+}
+
+nav a {
+    color: #007aff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a:before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
